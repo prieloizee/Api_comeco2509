@@ -26,10 +26,8 @@ module.exports = class userController {
     const newUser = { cpf, email, password, name };
     users.push(newUser);
 
-    return res.status(201).json({ message: "Usuário criado com sucesso", user: newUser });
+   return res.status(201).json({ message: "Usuário criado com sucesso", user: newUser }); 
   }
-
-
   static async getAllUsers(req, res) {
     return res.status(200).json({ message: "Obtendo todos os usuários", users });
   }
